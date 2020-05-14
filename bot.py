@@ -249,9 +249,10 @@ class ModmailBot(commands.Bot):
         return token
 
     @property
-    def guild_id(self) -> typing.Optional[int]:
-        for guild in self.guilds:
-            guild_id = guild.id
+    def guild_id(self, ctx) -> typing.Optional[int]:
+        guild = ctx.message.guild
+        guild_id = guild.id
+
         try:
             return int(str(guild_id))
 
