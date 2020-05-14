@@ -252,14 +252,14 @@ class ModmailBot(commands.Bot):
     def guild_id(self, ctx) -> typing.Optional[int]:
         guild = ctx.message.guild
         guild_id = guild.id
-
-        try:
-            return int(str(guild_id))
+        return int(str(guild_id))
+            
 
     
 
     @property
     def guild(self) -> typing.Optional[discord.Guild]:
+                                          
         """
         The guild that the bot is serving
         (the server where users message it from)
