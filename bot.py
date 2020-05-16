@@ -258,7 +258,7 @@ class ModmailBot(commands.Bot):
     
 
     @property
-    def guild(self) -> typing.Optional[discord.Guild]:
+    def guild(self, ctx) -> typing.Optional[discord.Guild]:
                                           
         """
         The guild that the bot is serving
